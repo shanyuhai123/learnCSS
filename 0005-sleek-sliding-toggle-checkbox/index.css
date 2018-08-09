@@ -1,0 +1,56 @@
+html,
+body,
+.checkbox,
+.checkbox .inner,
+.checkbox .inner .toggle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox {
+  width: 10rem;
+  height: 5rem;
+  background: linear-gradient(silver, whitesmoke);
+  border-radius: 2.5rem;
+  font-size: 1.2rem;
+}
+
+.checkbox .inner {
+  width: 8rem;
+  height: 4rem;
+  background: linear-gradient(dimgray, silver);
+  border-radius: 2rem;
+  box-shadow: inset 0 0 1.5rem rgba(0, 0, 0, .5);
+}
+
+.checkbox .inner .toggle {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(to top, silver, whitesmoke);
+  border-radius: 50%;
+  box-shadow: 0 .4rem .6rem rgba(0, 0, 0, .2);
+  position: relative;
+  left: -30%;
+}
+
+/* 按钮在左侧的样式 */
+
+.checkbox .inner .toggle::before {
+  position: absolute;
+  content: 'OFF';
+  width: 80%;
+  height: 80%;
+  line-height: calc(4rem * 0.8);
+  background: linear-gradient(silver, whitesmoke);
+  border-radius: 50%;
+  text-align: center;
+  font-family: sans-serif;
+  color: gray;
+}
+
+/* toggle 后样式修改 */
+.checkbox .inner.active {
+  background: linear-gradient(green, limegreen);
+}
