@@ -33,6 +33,7 @@ body,
   box-shadow: 0 .4rem .6rem rgba(0, 0, 0, .2);
   position: relative;
   left: -30%;
+  transition: .5s ease-in-out;
 }
 
 /* 按钮在左侧的样式 */
@@ -53,4 +54,11 @@ body,
 /* toggle 后样式修改 */
 .checkbox .inner.active {
   background: linear-gradient(green, limegreen);
+}
+.checkbox .inner.active .toggle {
+  left: 30%;
+}
+.checkbox .inner.active .toggle::before {
+  content: 'ON';
+  color: limegreen;
 }
