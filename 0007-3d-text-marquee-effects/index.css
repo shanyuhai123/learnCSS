@@ -1,0 +1,62 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  cursor: default;
+}
+
+/* 2D 布局 */
+.box .inner {
+  width: 400px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 4rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* inner first child */
+.box .inner:first-child {
+  background-color: indianred;
+  color: darkred;
+  /* 3D 效果 */
+  transform-origin: right;
+  transform: perspective(100px) rotateY(-15deg);
+}
+/* inner last child */
+.box .inner:last-child {
+  background-color: lightcoral;
+  color: antiquewhite;
+  /* 3D 效果 */
+  transform-origin: left;
+  transform: perspective(100px) rotateY(15deg);
+}
+
+/* animation */
+.box .inner span {
+  position: absolute;
+  animation: move 5s linear infinite;
+}
+.box .inner:first-child span {
+  animation-delay: 2.5s;
+  left: 100%;
+}
+
+@keyframes move {
+  from {
+    left: 100%
+  }
+  to {
+    left: -100%;
+  }
+}
+
+
