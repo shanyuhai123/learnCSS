@@ -1,0 +1,110 @@
+html, body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top left, white, dimgray);
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.books {
+  display: flex;
+  width: calc(12rem * 3 + 3rem *2);
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+
+.book {
+  position: relative;
+  width: 12rem;
+  height: 18rem;
+  transform: skewY(-10deg);
+  background: linear-gradient(navy, deeppink, tomato);
+  box-shadow: -10px 5px 30px rgba(0, 0, 0, .5);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.book:nth-child(2) {
+  top: -3rem;
+}
+.book:nth-child(3) {
+  top: -6rem;
+}
+
+.book:hover {
+  margin-top: -1.5rem;
+}
+
+.book::before, .book span::before {
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+  width: 1.5rem;
+  height: 100%;
+  content: '';
+  transform: skewY(45deg);
+  transform-origin: right;
+  background: linear-gradient(navy, deeppink, tomato);
+  filter: brightness(.8);
+}
+
+.book::after {
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  width: 100%;
+  height: 1.5rem;
+  content: '';
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  background: white;
+  filter: brightness(.9);
+}
+
+.book span {
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 8rem;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: -2px 2px 10px rgba(0, 0, 0, .3);
+}
+
+.book.html span,
+.book.html span::before {
+    background: orange;
+}
+
+.book.css span,
+.book.css span::before {
+    background: yellowgreen;
+}
+
+.book.javascript span,
+.book.javascript span::before {
+    background: royalblue;
+}
+
+.book span::after {
+  font-size: 1rem;
+  display: block;
+}
+
+.book.html span::after {
+  content: '<development />';
+}
+
+.book.css span::after {
+  content: '.development::';
+}
+
+.book.javascript span::after {
+  content: '{ development }';
+}
