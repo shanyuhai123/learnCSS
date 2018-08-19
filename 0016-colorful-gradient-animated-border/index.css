@@ -1,0 +1,52 @@
+html, body, .box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: #222;
+}
+
+.box {
+  font-size: 2.5em;
+  width: 10em;
+  height: 5em;
+  background-color: #111;
+  border-radius: 0.2em;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 1.5em;
+  position: relative;
+  animation: animate_text 2s linear infinite alternate;
+}
+
+.box::before {
+  position: absolute;
+  content: '';
+  width: calc(100% + 2%);
+  height: calc(100% + 4%);
+  z-index: -1;
+  border-radius: 0.2em;
+  background-image: linear-gradient(60deg, aquamarine, cornflowerblue, goldenrod, hotpink, salmon, lightgreen, sandybrown, violet);
+  background-size: 300%;
+  animation: animate_bg 5s infinite;
+}
+
+@keyframes animate_bg {
+  0%, 100% {
+    background-position: 0%, center;
+  }
+  50% {
+    background-position: 100%, center;
+  }
+}
+@keyframes animate_text {
+  from {
+    color: lime;
+  }
+  to {
+    color: yellow;
+  }
+}
