@@ -1,0 +1,60 @@
+html, body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.menu {
+  padding: 0;
+}
+
+.menu li {
+  color: transparent;
+  list-style-type: none;
+  font-size: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 7em;
+  margin: 0.5em;
+  line-height: 1em;
+  text-align: center;
+  border-top: 1px solid transparent;
+  position: relative;
+}
+
+.menu li:hover {
+  border-top: 1px solid yellow;
+}
+
+.menu li::before, .menu li::after {
+  content: attr(data-text);
+  color: silver;
+  position: absolute;
+  top: -0.5em;
+  left: 0;
+  width: 100%;
+}
+
+.menu li::before {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.menu li::after {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.menu li:hover::before, .menu li:hover::after {
+  color: yellow;
+  transition: left 0.3s ease-out;
+  transition-delay: 0.2s;
+}
+
+.menu li:nth-child(odd):hover::before, .menu li:nth-child(even):hover::after {
+  left: -0.15em;
+}
+
+.menu li:nth-child(even):hover::before, .menu li:nth-child(odd):hover::after {
+  left: 0.15em;
+}
