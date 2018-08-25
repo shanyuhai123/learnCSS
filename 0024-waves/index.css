@@ -1,0 +1,62 @@
+html, body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(antiquewhite, navajowhite);
+}
+
+.sea {
+  width: 300px;
+  height: 300px;
+  background-color: whitesmoke;
+  background-image: linear-gradient( darkblue, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.5));
+  border-radius: 5px;
+  box-shadow: 2px 5px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.sea .title {
+  color: white;
+  font-size: 24px;
+  font-family: serif;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 250px;
+  letter-spacing: 0.4em;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+}
+
+.sea .wave {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: deepskyblue;
+  left: calc(-1 * (500px - 300px) / 2);
+  top: calc((300px - 500px) - 50px);
+  filter: opacity(0.4);
+  border-radius: 43%;
+  animation: drift linear infinite; /* this word means: 漂流 */
+  animation-duration: 5s;
+}
+
+.sea .wave:nth-of-type(1) {
+  animation-duration: 5s;
+}
+.sea .wave:nth-of-type(2) {
+  animation-duration: 7s;
+}
+.sea .wave:nth-of-type(3) {
+  animation-duration: 9s;
+  background-color: red;
+  filter: opacity(0.1);
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(360deg);
+  }
+}
