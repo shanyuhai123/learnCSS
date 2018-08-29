@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightskyblue;
+}
+
+.pencil {
+  position: relative;
+  width: 50em;
+  height: 3.5em;
+  filter: drop-shadow(5px 10px 3px gray);
+}
+
+.pencil .barrel {
+  /* 笔杆 */
+  position: absolute;
+  width: 40em;
+  left: 4em;
+  background-color: green;
+  border-top: 1em solid forestgreen;
+  border-bottom: 1em solid darkgreen;
+  line-height: 1.5em;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  color: silver;
+  text-align: center;
+}
+
+.pencil .taper::before,
+.pencil .taper::after {
+    content: '';
+    position: absolute;
+    left: -4em;
+    border-style: solid;
+    border-width: calc(3.5em / 2) 4em;
+}
+
+.pencil .taper::before {
+    border-color: transparent burlywood transparent transparent;
+}
+
+.pencil .taper::after {
+    border-color: transparent green transparent transparent;
+    transform: scale(0.3);
+}
+
+.pencil .eraser {
+  /* 橡皮擦 */
+  position: absolute;
+  right: 0;
+  width: 6em;
+  height: 1.5em;
+  background-color: lightpink;
+  border-top: 1em solid pink;
+  border-bottom: 1em solid lightcoral;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+.pencil .eraser::before {
+  content: '';
+  position: absolute;
+  top: -1em;
+  left: 0;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: silver;
+  border-top: 1em solid lightgray;
+  border-bottom: 1em solid gray;
+}
