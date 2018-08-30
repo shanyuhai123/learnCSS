@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.loader {
+  width: 40em;
+  height: 3em;
+  color: dodgerblue;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader span {
+  position: absolute;
+  height: 3em;
+  animation: 
+    moving 2s linear infinite,
+    change-color 10s linear infinite;
+  animation-delay: calc((var(--n) - 10) * 0.2s);
+}
+.loader span:nth-child(1) {
+  --n: 1;
+}
+.loader span:nth-child(2) {
+  --n: 2;
+}
+.loader span:nth-child(3) {
+  --n: 3;
+}
+.loader span:nth-child(4) {
+  --n: 4;
+}
+.loader span:nth-child(5) {
+  --n: 5;
+}
+.loader span:nth-child(6) {
+  --n: 6;
+}
+.loader span:nth-child(7) {
+  --n: 7;
+}
+
+/* keyframes */
+@keyframes moving {
+  0% {
+    filter: opacity(0);
+    transform: rotate(-180deg);
+    left: 100%;
+  }
+  33% {
+    filter: opacity(1);
+    transform: rotate(0);
+    left: 60%;
+  }
+  66% {
+    filter: opacity(1);
+    transform: rotate(0);
+    left: 30%;
+  }
+  100% {
+    filter: opacity(0);
+    transform: rotate(180deg);
+    left: 0%;
+  }
+}
+@keyframes change-color {
+  0% {
+    color: dodgerblue;
+  }
+  20% {
+    color: hotpink;
+  }
+  40% {
+    color: gold;
+  }
+  60% {
+    color: mediumpurple;
+  }
+  80% {
+    color: lightgreen;
+  }
+  100% {
+    color: dodgerblue;
+  }
+}
