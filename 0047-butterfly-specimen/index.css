@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(gray, lightyellow, gray);
+}
+
+.butterfly {
+  position: relative;
+  width: 10em;
+  height: 10em;
+  transform: translateX(1em);
+}
+.butterfly::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  top: -2.5em;
+  left: -8em;
+  width: 24em;
+  height: 18em;
+  background-color: black;
+  border: 0.2em inset silver;
+}
+.butterfly::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  box-sizing: border-box;
+  width: 40em;
+  height: 30em;
+  background-color: lightyellow;
+  top: -9em;
+  left: -16em;
+  border: 2em solid burlywood;
+  border-radius: 3em;
+  box-shadow: 
+    0 0.3em 2em 0.4em rgba(0, 0, 0, 0.3),
+    inset 0.4em 0.4em 0.1em 0.5em rgba(0, 0, 0, 0.4);
+}
+.butterfly .left {
+  position: abosulute;
+  width: inherit;
+  height: inherit;
+}
+.butterfly .right {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  transform: rotateY(180deg) rotate(-90deg);
+  top: 0.4em;
+  left: 0.4em;
+}
+.butterfly span {
+  position: absolute;
+  border-radius: 50%;
+}
+.butterfly span:nth-of-type(1) {
+  width: 5em;
+  height: 7em;
+  background-color: gold;
+}
+.butterfly span:nth-of-type(2) {
+  width: 5.5em;
+  height: 3.5em;
+  background-color: orangered;
+  top: 5em;
+  left: -2.5em;
+  filter: opacity(0.6);
+}
+.butterfly span:nth-of-type(3) {
+  width: 6em;
+  height: 6em;
+  border-right: 0.3em solid orangered;
+  top: -0.5em;
+}
+/* .butterfly span:nth-child(1) {
+  width: 5em;
+  height: 7em;
+  background-color: gold;
+}
+.butterfly span:nth-child(2) {
+  width: 5.5em;
+  height: 3.5em;
+  background-color: orangered;
+  top: 5em;
+  left: -2.5em;
+  filter: opacity(0.6);
+}
+.butterfly span:nth-child(3) {
+  width: 6em;
+  height: 6em;
+  border-right: 0.3em solid orangered;
+  top: -0.5em;
+} */
