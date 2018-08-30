@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+:root {
+  --ball-w: 3em;
+  --ball-lc: hotpink;
+  --ball-rc: dodgerblue;
+}
+
+.loader {
+  width: 10em;
+  height: var(--ball-w);
+  border: 0.3em solid silver;
+  border-radius: var(--ball-w);
+  font-size: 20px;
+  border-left-color: var(--ball-lc);
+  border-right-color: var(--ball-rc);
+  position: relative;
+  animation: spin 3s linear infinite;
+}
+.loader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--ball-w);
+  height: var(--ball-w);
+  border-radius: 50%;
+  background-color: var(--ball-c);
+  animation: shift 3s linear infinite,
+             change-color 3s linear infinite;
+}
+
+/* keyframes */
+@keyframes shift {
+  50% {
+    left: calc(100% - var(--ball-w));
+  }
+}
+@keyframes change-color {
+  0%, 50% {
+    --ball-c: var(--ball-lc);
+  }
+  55%, 100% {
+    --ball-c: var(--ball-rc);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
