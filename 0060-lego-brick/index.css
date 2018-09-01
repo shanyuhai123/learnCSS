@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, white, skyblue);
+}
+
+.brick {
+  width: 40em;
+  height: 30em;
+  font-size: 10px;
+  position: relative;
+}
+.sides > * {
+  position: absolute;
+  background-color: #237dfb;
+}
+.sides .front {
+  width: 9em;
+  height: 6.8em;
+  top: 19em;
+  left: 7em;
+  transform-origin: right;
+  transform: skewY(30deg);
+}
+.sides .right {
+  width: 18em;
+  height: 6.8em;
+  filter: brightness(0.8);
+  top: 19em;
+  left: calc(7em + 9em);
+  transform-origin: left;
+  transform: skewY(-30deg);
+}
+.sides .top {
+  width: 18em;
+  height: 10.4em;
+  filter: brightness(1.2);
+  top: calc(19em - 10.4em);
+  left: calc(7em + 9em);
+  transform-origin: left bottom;
+  transform: rotate(-60deg) skewY(30deg);
+}
+
+.studs {
+  position: absolute;
+  width: 18em;
+  height: 10.4em;
+  filter: brightness(1.2);
+  top: calc(19em - 10.4em);
+  left: calc(7em + 9em);
+  transform-origin: left bottom;
+  transform: rotate(-60deg) skewY(30deg);
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.studs .column {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.studs span {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  background-color: #237dfb;
+  border-radius: 50%;
+}
+.studs span::before {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: -0.8em;
+  left: 0.6em;
+  background-color: #4cb7ff;
+  border-radius: 50%;
+}
