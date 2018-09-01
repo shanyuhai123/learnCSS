@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right bottom, silver, dimgray);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 150px;
+  height: 150px;
+  background-color: snow;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: pouring 3s linear infinite alternate;
+}
+.container::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 3px solid transparent;
+  border-left-color: white;
+  border-radius: 50%;
+  left: 40px;
+  top: 40px;
+  transform: rotate(-10deg);
+}
+.pot {
+  width: 85px;
+  height: 85px;
+  background-color: deepskyblue;
+  border-radius: 50%;
+  position: relative;
+  border-right: 5px solid steelblue;
+}
+.pot::before {
+  content: '';
+  position: absolute;
+  width: 85px;
+  height: 43px;
+  background-color: hotpink;
+  border-radius: 43px 43px 0 0;
+  border-right: 5px solid palevioletred;
+}
+.pot::after {
+  content: '';
+  position: absolute;
+  width: 43px;
+  height: 10px;
+  background-color: hotpink;
+  left: 21px;
+  top: -3px;
+}
+.pot .handle {
+  width: 83px;
+  height: 7px;
+  background-color: black;
+  border-radius: 7px;
+  position: absolute;
+  left: 13px;
+  top: 12px;
+}
+.pot .handle::before {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 50px;
+  background-color: black;
+  border-radius: 7px;
+  left: calc(85px - 7px);
+}
+
+
+@keyframes pouring {
+  0%, 25% {
+    transform: rotate(0deg);
+  }
+  75%, 100% {
+    transform: rotate(-45deg);
+  }
+}
