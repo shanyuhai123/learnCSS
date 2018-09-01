@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right bottom, moccasin, teal);
+}
+
+.toaster {
+  width: 30em;
+  height: 30em;
+  background-color: snow;
+  font-size: 10px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+/* 机体 */
+.body {
+  width: 16em;
+  height: 14em;
+  position: absolute;
+  top: 10em;
+  left: 6em;
+  background-color: seagreen;
+  border-radius: 2.5em;
+  border-right: 1.5em solid darkgreen;
+}
+/* 按钮 */
+.button {
+ width: 2.5em;
+ height: 2.5em;
+ position: absolute;
+ top: 13em;
+ left: 16em;
+ background-color: tomato;
+ border-radius: 50%;
+}
+/* 支腿 */
+.legs::before,
+.legs::after {
+  content: '';
+  width: 1.5em;
+  height: 2em;
+  position: absolute;
+  top: 24em;
+  background-color: tomato;
+}
+.legs::before {
+  left: 9em;
+}
+.legs::after {
+  right: 10em;
+}
+/* 手柄 */
+.handle {
+  width: 4.2em;
+  height: 1.8em;
+  position: absolute;
+  top: 12em;
+  right: 2.4em;
+  background-color: tomato;
+  border-radius: 0 0.6em 0.6em 0;
+  animation: bake 3s infinite alternate;
+}
+/* 面包 */
+.toast {
+  width: 9em;
+  height: 6em;
+  position: absolute;
+  top: 4em;
+  left: 10em;
+  background-color: gold;
+  border-radius: 2em 2em 0 0;
+  z-index: -1;
+  animation: bake 3s infinite alternate;
+}
+
+/* 阴影 */
+.body::before,
+.body::after {
+  content: '';
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  border: 0.6em solid transparent;
+  border-radius: 50%;
+  border-left-color: white;
+}
+.body::before {
+  transform: rotate(40deg);
+  top: 1em;
+  left: 1em;
+}
+.body::after {
+  transform: rotate(-130deg);
+  bottom: 1em;
+  right: 1em;
+}
+
+/* keyframes */
+@keyframes bake {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  80%, 100% {
+    transform: translateY(6em);
+  }
+}
