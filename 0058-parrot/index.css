@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  background-color: darkslategray;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.parrot {
+  font-size: 24px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 10em;
+  height: 10em;
+  align-items: center;
+  justify-content: center;
+}
+
+.parrot > * {
+  position: absolute;
+  transition: .5s;
+  transform: rotate(45deg);
+}
+
+.parrot .outer {
+  width: 100%;
+  height: 100%;
+  border: 1em solid;
+  border-color: transparent transparent orangered tomato;
+  border-radius: 50%;
+}
+
+.parrot .middle {
+  width: 80%;
+  height: 80%;
+  border: 4em solid;
+  border-color: gold transparent gainsboro white;
+  border-radius: 50%;
+}
+
+.parrot .inner {
+  width: 40%;
+  height: 40%;
+  border: 2em solid;
+  border-color: transparent orange transparent transparent;
+  border-radius: 50%;
+}
+
+.parrot .inner::before {
+  position: absolute;
+  top: -.5em;
+  left: -2em;
+  width: 1em;
+  height: 1em;
+  content: '';
+  border-radius: 50%;
+  background-color: black;
+}
+
+.parrot:hover .outer {
+  transform: rotate(225deg);
+  border-color: transparent transparent lightseagreen darkcyan;
+}
+
+.parrot:hover .middle {
+  transform: rotate(calc(225deg - 360deg));
+  border-color: transparent orange white gainsboro;
+}
+
+.parrot:hover .inner {
+  transform: rotate(135deg);
+  border-color: transparent gold transparent transparent;
+}
