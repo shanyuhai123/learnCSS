@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --bg: teal;
+  background-color: var(--bg);
+}
+
+.fox {
+  width: 7em;
+  height: 9em;
+  font-size: 30px;
+  --c: chocolate;
+  color: var(--c);
+  position: relative;
+  transition: 1s;
+}
+
+/* head */
+.fox .head {
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  background-color: currentColor;
+  border-radius: 50%;
+  right: 0;
+}
+
+.fox .faces::before,
+.fox .faces::after {
+  content: '';
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  background-color: white;
+  border-radius: 0 100%;
+  top: 3em;
+}
+.fox .faces::after {
+  right: 0;
+  transform: rotateY(180deg);
+}
+
+.fox .eyes::before,
+.fox .eyes::after {
+  content: '';
+  position: absolute;
+  border: 0.3em solid;
+  border-color: black black transparent transparent;
+  border-radius: 50%;
+  top: 4.5em;
+}
+.fox .eyes::before {
+  left: 1em;
+}
+.fox .eyes::after {
+  right: 1em;
+  transform: rotateY(180deg);
+}
+
+.fox .ears::before,
+.fox .ears::after {
+  content: '';
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  background-color: currentColor;
+  filter: brightness(1.25);
+  border-radius: 0 100% 0 0;
+  z-index: -1;
+}
+.fox .ears::after {
+  right: 0;
+  transform: rotateY(180deg);
+}
+
+.fox .nose {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-color: black;
+  border-radius: 50%;
+  bottom: calc(-1em / 2);
+  left: calc((6em - 1em) / 2);
+}
+/* tail */
+.fox .tail {
+  position: absolute;
+  width: 7em;
+  height: 7em;
+  background-color: currentColor;
+  border-radius: 50%;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.fox .tail::before {
+  content: '';
+  position: absolute;
+  width: calc(7em / 2);
+  height: calc(7em / 2);
+  left: -1px;
+  background-color: var(--bg);
+  border-radius: 100% 0 0 0;
+}
+.fox .tail::after {
+  content: '';
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border-radius: 0 0 100% 0;
+  left: 0;
+  top: calc(7em / 2);
+  background-color: white;
+}
+
+.fox:hover {
+  --c: lightblue;
+}
