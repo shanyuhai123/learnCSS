@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, silver, teal);
+}
+
+.loader {
+  --diameter: 10em;
+  /* 定义摩天轮的直径, 并以此为基准 */
+  --width: calc(var(--diameter) * 2);
+  --stroke-width: calc(var(--diameter) / 40);
+  --dot-diameter: calc(var(--diameter) / 10);
+  width: var(--width);
+  height: var(--diameter);
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+}
+.loader::before {
+  width: inherit;
+  height: var(--stroke-width);
+  background-color: currentColor;
+}
+.loader::after {
+  box-sizing: border-box;
+  width: var(--diameter);
+  height: var(--diameter);
+  border: var(--stroke-width) solid;
+  border-radius: 50%;
+  left: 25%;
+}
+
+.loader span {
+  --vertical-center: calc((var(--diameter) / 2 - var(--stroke-width) - var(--dot-diameter)) * -1);
+  position: absolute;
+  width: var(--dot-diameter);
+  height: var(--dot-diameter);
+  background-color: currentColor;
+  border-radius: 50%;
+  bottom: var(--stroke-width);
+  left: calc((var(--width) - var(--dot-diameter)) / 2);
+  animation: 
+    run 2s linear infinite,
+    rotating 2s linear infinite;
+  transform-origin: 50% var(--vertical-center);
+}
+.loader span:nth-child(1) {
+  animation-delay: 0.075s;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+
+@keyframes rotating {
+  0%, 10% {
+    transform: rotate(0deg);
+  }
+  60%, 100% {
+    transform: rotate(-1turn);
+  }
+}
+@keyframes run {
+  0% {
+    left: calc(var(--dot-diameter) * -1);
+  }
+  10%, 60% {
+    left: calc((var(--width) - var(--dot-diameter)) / 2);
+  }
+  70%, 100% {
+    left: calc(var(--width));
+  }
+}
