@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(lightyellow, burlywood);
+}
+
+.pendulums {
+  --bg-color: cadetblue;
+  width: 40em;
+  height: 30em;
+  font-size: 10px;
+  border-top: 0.3em solid var(--bg-color);
+  position: relative;
+}
+
+.pendulums span {
+  position: absolute;
+  left: 50%;
+  width: 0.2em;
+  height: calc((var(--n) - 1) * 1em + 15em);
+  background-color: var(--bg-color);
+  transform-origin: 50% top;
+  transform: translateX(-50%) rotate(25deg);
+  animation: swing ease-in-out infinite;
+  animation-duration: calc((var(--n) - 1) * 0.02s + 1.5s);
+}
+.pendulums span::before {
+  --radius: 1.5em;
+  content: '';
+  position: absolute;
+  height: var(--radius);
+  width: var(--radius);
+  top: 100%;
+  left: calc(var(--radius) / -2);
+  background: radial-gradient(
+    /* 径向渐变为小球增加光影, 立体效果 */
+    circle at 70% 35%,
+    white,
+    darkturquoise 30%,
+    steelblue 50%
+  );
+  border-radius: 50%;
+}
+.pendulums span::after {
+  /* after 伪元素为小球添加投影 */
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: 0.3em;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 120%;
+  left: -1em;
+  filter: blur(0.3em);
+}
+
+@keyframes swing {
+  50% {
+    transform: rotate(-25deg);
+  }
+}
