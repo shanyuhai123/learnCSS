@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(white, bisque);
+}
+
+.buddha {
+  --bg-color: peachpuff;
+  --shadow-width: 5em;
+  --shadow-height: 1em;
+  width: 13em;
+  height: 19em;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: updown 2s linear infinite;
+}
+
+.head {
+  width: 10em;
+  height: 10em;
+  color: var(--bg-color);
+  background-color: currentColor;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+.head::before {
+  content: '';
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  border-radius: 50%;
+}
+.head::after {
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  color: var(--bg-color);
+  background-color: currentColor;
+  top: 5.5em;
+  left: -0.8em;
+  box-shadow: 
+    9.6em 0;
+}
+.eyes::before,
+.eyes::after {
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: 1em;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: black black transparent transparent;
+  transform: rotate(-15deg);
+  top: 25%;
+  z-index: 3;
+}
+.eyes::before {
+  left: 3em;
+}
+.eyes::before {
+  right: 0;
+}
+.mouth {
+  position: absolute;
+  width: 2em;
+  height: 1em;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: red red transparent transparent;
+  transform: rotate(180deg);
+  top: 35%;
+  z-index: 3;
+}
+.body {
+  position: absolute;
+  width: 8em;
+  height: 8em;
+  color: var(--bg-color);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at center,
+      currentColor 20%,
+      orangered 20%, orangered 100%
+    );
+  top: 8.5em;
+  z-index: 1;
+}
+.legs {
+  position: absolute;
+  width: 10em;
+  height: 3em;
+  border-radius: 3em;
+  color: var(--bg-color);
+  background: orangered;
+  top: 13.5em;
+  z-index: 0;
+}
+
+.shadow {
+  position: absolute;
+  width: var(--shadow-width);
+  height: var(--shadow-height);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.25);
+  bottom: 0;
+  filter: blur(0.2em);
+  animation: shadow-animate 2s linear infinite;
+}
+
+@keyframes updown {
+  50% {
+    transform: translateY(-2em);
+    --shadow-width: 3em;
+    --shadow-height: 0.5em;
+    filter: blur(0.05em);
+  }
+}
