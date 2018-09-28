@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: teal;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+:root {
+  font-size: 10px;
+}
+
+nav ul li {
+  width: 20em;
+  height: 7em;
+  line-height: 7em;
+  font-size: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+  margin: 3rem;
+}
+nav li:hover {
+  color: white;
+  transform: translate(1.5rem, 1.5rem);
+}
+nav li:hover::after {
+  transform: translate(-1.5rem, -1.5rem);
+}
+
+nav li::before,
+nav li::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+nav li::before {
+  background-color: white;
+  z-index: -1;
+  box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.2);
+}
+nav li::after {
+  background-color: goldenrod;
+  z-index: -2;
+  transform: translate(1.5em, 1.5em);
+}
+nav li:hover::before {
+  background-color: goldenrod;
+}
+nav li:hover::after {
+  background-color: white;
+}
