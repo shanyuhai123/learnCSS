@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+
+.loader {
+  width: 11.7em;
+  height: 4.2em;
+  color: lightcyan;
+  position: relative;
+}
+
+.loader .car {
+  /* 车底盘 */
+  position: absolute;
+  width: inherit;
+  height: 2em;
+  background-color: currentColor;
+  top: 1.5em;
+  border-radius: 0 5em 1em 0 / 0 4em 1em 0;
+  animation: run 0.25s linear infinite;
+}
+.loader .car::before {
+  /* 尾翼 */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 0.6em solid transparent;
+  border-left-width: 0;
+  border-right-color: currentColor;
+  transform-origin: left;
+  transform: rotate(-45deg);
+  top: -0.5em;
+}
+
+.loader .body {
+  /* 车身 */
+  position: absolute;
+  width: 7.5em;
+  height: 3.5em;
+  box-sizing: border-box;
+  border: 0.4em solid;
+  border-radius: 3em 4.5em 0 0 / 3em 4em 0 0;
+  top: -1.5em;
+  left: 1.2em;
+}
+.loader .body::before {
+  /* 后车窗 */
+  content: '';
+  position: absolute;
+  width: 3.5em;
+  height: inherit;
+  background-color: currentColor;
+  border-top-left-radius: inherit;
+  top: -0.4em;
+  left: -0.4em;
+}
+
+.loader .wheels::before,
+.loader .wheels::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 2.6em;
+  height: 2.6em;
+  /* background-color: #333; */
+  border-radius: 50%;
+  bottom: -1em;
+  border: 0.3em solid #333;
+  background:
+    linear-gradient(
+      0deg,
+      transparent 45%,
+      currentColor 46%, currentColor 54%,
+      transparent 55%
+    ), 
+    linear-gradient(
+      45deg,
+      transparent 45%,
+      currentColor 46%, currentColor 54%,
+      transparent 55%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 45%,
+      currentColor 46%, currentColor 54%,
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 45%,
+      currentColor 46%, currentColor 54%,
+      transparent 55%
+    ),
+    radial-gradient(
+      currentColor 29%,
+      transparent 30%, transparent 50%,
+      currentColor 51%
+    ),
+    #333;
+    transform-origin: 50% 50%;
+  animation: rotating 0.5s linear infinite;
+}
+.loader .wheels::before {
+  left: 1.2em;
+}
+.loader .wheels::after {
+  right: 0.8em;
+}
+
+.loader .strikes {
+  position: absolute;
+  width: 1em;
+  height: inherit;
+  /* border: 1px dashed white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loader .strikes span {
+  height: 0.1em;
+  background-color: lightcyan;
+  animation: drift 0.2s linear infinite;
+  animation-delay: calc((var(--n) - 1) * 0.05s);
+}
+.loader .strikes span:nth-child(1) {
+  --n: 1;
+}
+.loader .strikes span:nth-child(2) {
+  --n: 2;
+}
+.loader .strikes span:nth-child(3) {
+  --n: 3;
+}
+.loader .strikes span:nth-child(4) {
+  --n: 4;
+}
+.loader .strikes span:nth-child(5) {
+  --n: 5;
+}
+
+@keyframes drift {
+  from {
+    transform: translate(3.5em);
+  }
+  to {
+    transform: translate(-8em);
+    filter: opacity(0);
+  }
+}
+@keyframes rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes run {
+  0% {
+    transform: translate(0.02em, 0.01em) rotate(0deg);
+  }
+  20% {
+    transform: translate(0.01em, 0.02em) rotate(0.3deg);
+  }
+  40% {
+    transform: translate(0.01em, -0.01em) rotate(-0.3deg);
+  }
+  60% {
+    transform: translate(-0.01em, 0.02em) rotate(0deg);
+  }
+  80% {
+    transform: translate(-0.01em, 0.01em) rotate(0.3deg);
+  }
+  100% {
+    transform: translate(0.02em, 0.01em) rotate(-0.3deg);
+  }
+}
