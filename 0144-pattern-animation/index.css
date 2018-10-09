@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: skyblue;
+}
+
+.container {
+  width: calc(40px * var(--side-length));
+  height: calc(40px * var(--side-length));
+  position: relative;
+}
+
+.container .horizontal,
+.container .vertical {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(var(--side-length), 1fr);
+}
+
+.container .horizontal span {
+  width: 40px;
+  height: 10px;
+  background-color: white;
+  margin: 15px 0;
+}
+
+.container .vertical span {
+  width: 10px;
+  height: 40px;
+  background-color: white;
+  margin: 0 15px;
+}
