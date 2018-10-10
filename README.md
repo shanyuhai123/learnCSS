@@ -32,3 +32,35 @@
 ## 待办
 
 - [ ] 针对 `0000` 文件夹中的每个属性一些拓展性的用法 
+
+## 效果列表
+
+### 0001. Button text staggered sliding effects
+
+**介绍 : **  按钮文字滑动特效
+
+**效果 : **
+
+![按钮文字滑动特效](G:\learnCSS\0000-0-images\0001.png)
+
+**链接 : ** [github](https://shanyuhai123.github.io/learnCSS/0001-button-text-staggered-sliding-effects/)
+
+### 0002. Rectangular rotating loader animation
+
+**介绍 : **  矩形旋转 `loader` 特效
+
+**效果 : **
+
+![矩形旋转loader特效](G:\learnCSS\0000-0-images\0002.png)
+
+**链接 : ** [github](https://shanyuhai123.github.io/learnCSS/0002-rectangular-rotating-loader-animation/)
+
+### 0003. Diagonal stripe border effects
+
+**介绍 : **  容器厚条纹边框特效
+
+**效果 : **
+
+![å¾çæè¿°](G:\learnCSS\0000-0-images\0003.png)
+
+**链接 : ** [github](https://shanyuhai123.github.io/learnCSS/0003-diagonal-stripe-border-effects/)
