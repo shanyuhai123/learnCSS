@@ -647,14 +647,62 @@
 
 **链接 : ** [github](https://shanyuhai123.github.io/learnCSS/0051-radar-scanning/)
 
+### 0052. Ring and spheres animation
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/052-ring-and-spheres-animation)
+
+**介绍 :**  小球绕着圆环盘旋的动画
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0052.png) 
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0052-ring-and-spheres-animation/)
+
+### 0053. Text fade loader
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/053-text-fade-loader)
+
+**介绍 :**  文本淡入淡出的 loader 动画
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0053.0.png) 
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0053-text-fade-loader/)
+
+### 0054. Chessboard
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/054-chessboard)
+
+**介绍 :**  国际象棋
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0054.png) 
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0054-chessboard/)
+
+### 0055. Sun, Earth and Moon Model
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/055-sun-earth-and-moon-model)
+
+**介绍 :**  太阳、地球、月亮的运转模型
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0055.png) 
+
+**链接 :** github
+
 ### 00
 
-**原文链接 : ** github
+**原文链接 :** github
 
-**介绍 : **  容器厚条纹边框特效
+**介绍 :**  容器厚条纹边框特效
 
-**效果 : **
+**效果 :**
 
 
 
-**链接 : ** github
+**链接 :** github
