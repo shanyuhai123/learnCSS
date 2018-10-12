@@ -1857,7 +1857,31 @@
 
 ![å¾çæè¿°](0000-0-images/0152.png) 
 
-**链接 :** https://shanyuhai123.github.io/learnCSS/0152-black-dots-illusion/
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0152-black-dots-illusion/)
+
+### 0153. Emoji tooltips
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/153-emoji-tooltips)
+
+**介绍 :**  用 CSS 和 VanillaJS 创作一组 tooltip 提示框
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0153.png)
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0153-emoji-tooltips/)
+
+### 0154. Giddy animation
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/154-giddy-animation)
+
+**介绍 :**  眼冒金星的动画效果
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0154.png)
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0154-giddy-animation/)
 
 ### 015
 
