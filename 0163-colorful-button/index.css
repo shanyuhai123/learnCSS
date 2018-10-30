@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font: normal 1em, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white; /* just assistant, will be removed finally */
+}
+
+h1,
+h2 {
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: capitalize;
+}
+h1 {
+  font-size: 2em;
+  color: #066;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.7);
+}
+h2 {
+  background: linear-gradient(45deg, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  font-size: 16px;
+  color: white; /* default */
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid;
+  border-radius: 0.2em;
+  outline: none;
+  padding: 1em 2em;
+  margin: 0.5em;
+  cursor: pointer;
+}
