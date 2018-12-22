@@ -1907,7 +1907,91 @@
 
 **链接 :** [github](https://shanyuhai123.github.io/learnCSS/0156-airplane-window-toggle/)
 
-### 015
+### 0157. Chessboard illusion
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/157-chessboard-illusion)
+
+**介绍 :**  棋盘错觉动画
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0157.png)
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0157-chessboard-illusion/)
+
+### 0158. Umbrella toggle
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/158-umbrella-toggle)
+
+**介绍 :**  雨伞 toggle 控件
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0158.png)
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0158-umbrella-toggle/)
+
+### 0159. Halloween Switcher
+
+**原文链接 :** [github](https://github.com/shanyuhai123/learnCSS/tree/master/0159-halloween-switcher)
+
+**介绍 :**  容器厚条纹边框特效
+
+**效果 :**
+
+![](0000-0-images/0159.png)
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0159-halloween-switcher/)
+
+### 0160. Apple devices slide show
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/159-apple-devices-slide-show)
+
+**介绍 :**  苹果设备交互动画
+
+**效果 :**
+
+![](0000-0-images/0160.png)
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0160-apple-devices-slide-show/)
+
+### 0161. Opening popup animation
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/160-opening-popup-animation)
+
+**介绍 :**  内容弹窗的交互动画
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0161.png)
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0161-opening-popup-animation/)
+
+### 0162. Chaplin
+
+**原文链接 :** [github](https://github.com/comehope/front-end-daily-challenges/tree/master/161-chaplin)
+
+**介绍 :**  卓别林
+
+**效果 :**
+
+![å¾çæè¿°](0000-0-images/0162.png)
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0162-chaplin/)
+
+### 0163. Colorful Buttons
+
+**原文链接 :** [github](https://github.com/shanyuhai123/learnCSS/tree/master/0163-colorful-button)
+
+**介绍 :**  多彩的 Buttons
+
+**效果 :**
+
+![](0000-0-images/0163.png)
+
+**链接 :** [github](https://shanyuhai123.github.io/learnCSS/0163-colorful-button/)
+
+### 016
 
 **原文链接 :** github
 
@@ -1918,6 +2002,3 @@
 
 
 **链接 :** github
-
-
-
